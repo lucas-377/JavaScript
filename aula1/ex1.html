@@ -11,6 +11,7 @@
                 background-color: antiquewhite;
                 font-family: Arial, Helvetica, sans-serif;
                 text-align: center;
+                font-size: 20pt;
             }
         </style>
     </head>
@@ -24,6 +25,8 @@
     </body>
 
     <script>
-        alert('Bem-Vindo!')
+       var nome = window.prompt('Qual seu nome?')
+       document.write(`Olá, <strong>${nome}!</strong><br>`)
+       document.write(`Seu nome tem ${nome.length} letras`)
     </script>
 </html>
