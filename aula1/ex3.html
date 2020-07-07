@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +10,18 @@
             font: normal 18pt arial;
             text-align: center;
         }
+
+        #interaja {
+            background: #58d858;
+            border-radius: 30px;
+            padding: 10px 0;
+            width: 200px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+        }
     </style>
 </head>
 <body>
@@ -18,5 +30,28 @@
     <p>
         Treinando os eventos.
     </p>
+
+    <div class="container">
+        <div id="interaja" onclick="clique()" onmouseenter="dentro()" onmouseout="fora()">
+            Clique em mim
+        </div>
+    </div>
+
+    <script>
+        var area = window.document.getElementById('interaja')
+
+        function clique(){
+          area.innerText = 'Clicou!'
+        }
+
+        function dentro(){
+            area.style.color = '#fff'
+        }
+
+        function fora(){
+            area.style.color = '#000'
+            area.innerText = 'Clique em mim'
+        }
+    </script>
 </body>
 </html>
