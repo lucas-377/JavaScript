@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex5</title>
+
+    <!-- Biblioteca de icones -->
+    <script src="https://kit.fontawesome.com/6965183d02.js" crossorigin="anonymous"></script>
+
+    <style>
+        body {
+            font: normal 20pt arial;
+            background: whitesmoke;
+            text-align: center;
+        }
+
+        .cabecalho {
+            background: #b6b6b6;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 50px 0;
+        }
+
+        #icone {
+            font-size: 70pt;
+            background: #2c2c2c;
+            width: 128px;
+            padding: 15px 5px;
+            border-radius: 100px;
+            color: whitesmoke;
+        }
+
+        .corpo {
+            padding-top: 50px;
+        }
+
+        .operacao {
+            padding: 15px 0;
+        }
+
+        .resultado {
+            padding-top: 15px;
+        }
+
+        .rodape {
+            background: #b6b6b6;
+            height: 50px;
+            line-height: 50px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cabecalho">
+        <div id="icone">
+            <i class="fas fa-calculator"></i>
+        </div>
+        
+        <h1>Calculadora</h1>
+    </div>
+
+    <div class="corpo">
+        <div class="operacao">
+            <input type="number" name="nb1" id="nb1"> +
+            <input type="number" name="nb2" id="nb2">
+            <input type="button" value="Somar" onclick="somar()">
+            <div id="resultado-soma" class="resultado">Resultado</div>
+        </div>
+
+        <div class="operacao">
+            <input type="number" name="nb3" id="nb3"> -
+            <input type="number" name="nb4" id="nb4">
+            <input type="button" value="Subtrair" onclick="subtrair()">
+            <div id="resultado-sub" class="resultado">Resultado</div>
+        </div>
+
+        <div class="operacao">
+            <input type="number" name="nb5" id="nb5"> *
+            <input type="number" name="nb6" id="nb6">
+            <input type="button" value="Multiplicar" onclick="multiplicar()">
+            <div id="resultado-mult" class="resultado">Resultado</div>
+        </div>
+
+        <div class="operacao">
+            <input type="number" name="nb7" id="nb7"> /
+            <input type="number" name="nb8" id="nb8">
+            <input type="button" value="Dividir" onclick="dividir()">
+            <div id="resultado-divisao" class="resultado">Resultado</div>
+        </div>
+
+        <div class="rodape">
+            <p>
+                Criado por Lucas Santana.
+            </p>
+        </div>
+    </div>
+
+    <script>
+        function somar(){
+            var nb1 = window.document.getElementById('nb1')
+            var nb2 = window.document.getElementById('nb2')
+            var res = window.document.getElementById('resultado-soma')
+
+            var n1 = Number(nb1.value)
+            var n2 = Number(nb2.value)
+            var soma = n1 + n2
+
+            res.innerHTML = `A soma entre ${n1} e ${n2} é igual a <strong>${soma}</strong>`
+        }
+
+        function subtrair(){
+            var nb1 = window.document.getElementById('nb3')
+            var nb2 = window.document.getElementById('nb4')
+            var res = window.document.getElementById('resultado-sub')
+
+            var n1 = Number(nb1.value)
+            var n2 = Number(nb2.value)
+            var sub = n1 - n2
+
+            res.innerHTML = `A subtração entre ${n1} e ${n2} é igual a <strong>${sub}</strong>`
+        }
+
+        function multiplicar(){
+            var nb1 = window.document.getElementById('nb5')
+            var nb2 = window.document.getElementById('nb6')
+            var res = window.document.getElementById('resultado-mult')
+
+            var n1 = Number(nb1.value)
+            var n2 = Number(nb2.value)
+            var mult = n1 * n2
+
+            res.innerHTML = `A multiplicação entre ${n1} e ${n2} é igual a <strong>${mult}</strong>`
+        }
+
+        function dividir(){
+            var nb1 = window.document.getElementById('nb7')
+            var nb2 = window.document.getElementById('nb8')
+            var res = window.document.getElementById('resultado-divisao')
+
+            var n1 = Number(nb1.value)
+            var n2 = Number(nb2.value)
+            var div = n1 / n2
+
+            res.innerHTML = `A divisão entre ${n1} e ${n2} é igual a <strong>${div}</strong>`
+        }
+    </script>
+</body>
+</html>
