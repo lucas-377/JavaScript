@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionanlidade</title>
+
+    <style>
+
+    </style>
+</head>
+
+<body>
+
+    <h1>Teste de nacionalidade</h1>
+
+    <input type="text" name="txt" id="txt">
+    <input type="button" value="Checar" id="botao" onclick="teste()">
+    <p id="res">Teste de nacionalidade brasileira.</p>
+    
+    <script>
+        function teste(){
+            var nacionalidade = window.document.getElementById('txt')
+            var resultado = window.document.getElementById('res')
+
+            if(nacionalidade == "Brasil"){
+                resultado.innerHTML = `Nascendo no ${nacionalidade} você é Brasileiro.`
+            }
+
+            else {
+                resultado.innerHTML = `Nascendo no ${nacionalidade} você é Estrangeiro.`
+            }
+        }
+    </script>
+</body>
+</html>
