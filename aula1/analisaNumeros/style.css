@@ -1,0 +1,36 @@
+p {
+    margin: 5px 0;
+}
+
+body {
+    background: #b14c4c;
+    font: normal 15pt Arial;
+    color: whitesmoke;
+}
+
+header {
+
+}
+
+section {
+    background: whitesmoke;
+    border-radius: 20px;
+    padding: 10px 0;
+    width: 500px;
+    color: black;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.116);
+    margin: auto;
+    padding-left: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+#flista {
+    width: 170px;
+}
+
+footer {
+    text-align: center;
+}
