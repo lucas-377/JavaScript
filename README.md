@@ -1,2 +1,2 @@
-# CursoJS
- Curso de JavaScript
+# Projetos em Js
+Projetos de estudo da linguagem.
