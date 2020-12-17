@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicios</title>
+</head>
+
+<body style="font-family: Arial, Helvetica, sans-serif;">
+    <h1 style="text-align: center;">Instagrao</h1>
+
+    <div style="width: 400px; height: 400px; background-color: silver; position: relative; margin: 0 auto; border-radius: 10px;" ondblclick="like()">
+
+        <div id="like-hover" style="position: absolute; top: 0; left: 0; bottom: 0; right: 0; display: flex; justify-content: center; align-items: center; background-color: #00000065; border-radius: 10px; display: none;"><p style="font-size: 100px; color: #ffffff;">&#9825</p></div>
+    </div>
+
+    <p style="text-align: center;">&#9829<span id="likes-numero">0</span></p>    
+</body>
+
+<script>
+    var efeito = document.querySelector('#like-hover');
+
+    var likes = 0;
+    var likeNumeros = document.querySelector('#likes-numero');
+
+    function like(){
+        efeito.style.display = 'flex';
+        likes = 1;
+
+        likeNumeros.textContent = likes;
+
+        setTimeout(fadeOut, 800);
+    }
+
+    function fadeOut(){
+        efeito.style.display = 'none';
+    }
+</script>
+
+</html>

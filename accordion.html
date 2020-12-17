@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de accordion</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .accordion-head {
+            width: 90%;
+            margin: 0 auto;
+            padding: 0 15px;
+            height: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .accordion-head span,
+        .accordion-head.on span.on {
+            display: block;
+        }
+
+        .accordion-head span.on,
+        .accordion-head.on span {
+            display: none;
+        }
+
+        .accordion-body {
+            width: 90%;
+            margin: 0 auto;
+            padding: 15px 30px;
+            display: none;
+            border: 1px solid #000000;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="accordion">
+        <button class="accordion-head">Aqui vai o texto do accordion <span>&plus;</span><span class="on">&minus;</span></button>
+        <div class="accordion-body">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam accusamus minus est dicta amet, aperiam eos recusandae quasi! Harum, sit hic. Eum debitis atque hic dolores iure id, voluptatem corporis. Quas non mollitia quos quisquam rerum est ratione aliquid id exercitationem consequatur? Maxime ad autem tempore dolor maiores commodi cum iure, explicabo consequuntur incidunt eveniet corporis vero atque magnam quam eum, reprehenderit nemo? Asperiores quisquam fugiat perferendis. Ea impedit itaque laborum, nisi, sint reiciendis delectus porro et blanditiis sapiente, eveniet qui accusantium in at. Perspiciatis ea nam inventore, blanditiis modi neque! Excepturi consequuntur eveniet cumque aperiam exercitationem maxime! Magni, voluptatem.</div>
+    </div>
+
+    <div class="accordion">
+        <button class="accordion-head">Aqui vai o texto do accordion 2<span>&plus;</span><span class="on">&minus;</span></button>
+        <div class="accordion-body">2 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam accusamus minus est dicta amet, aperiam eos recusandae quasi! Harum, sit hic. Eum debitis atque hic dolores iure id, voluptatem corporis. Quas non mollitia quos quisquam rerum est ratione aliquid id exercitationem consequatur? Maxime ad autem tempore dolor maiores commodi cum iure, explicabo consequuntur incidunt eveniet corporis vero atque magnam quam eum, reprehenderit nemo? Asperiores quisquam fugiat perferendis. Ea impedit itaque laborum, nisi, sint reiciendis delectus porro et blanditiis sapiente, eveniet qui accusantium in at. Perspiciatis ea nam inventore, blanditiis modi neque! Excepturi consequuntur eveniet cumque aperiam exercitationem maxime! Magni, voluptatem.</div>
+    </div>
+
+    <div class="accordion">
+        <button class="accordion-head">Aqui vai o texto do accordion 2<span>&plus;</span><span class="on">&minus;</span></button>
+        <div class="accordion-body">2 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam accusamus minus est dicta amet, aperiam eos recusandae quasi! Harum, sit hic. Eum debitis atque hic dolores iure id, voluptatem corporis. Quas non mollitia quos quisquam rerum est ratione aliquid id exercitationem consequatur? Maxime ad autem tempore dolor maiores commodi cum iure, explicabo consequuntur incidunt eveniet corporis vero atque magnam quam eum, reprehenderit nemo? Asperiores quisquam fugiat perferendis. Ea impedit itaque laborum, nisi, sint reiciendis delectus porro et blanditiis sapiente, eveniet qui accusantium in at. Perspiciatis ea nam inventore, blanditiis modi neque! Excepturi consequuntur eveniet cumque aperiam exercitationem maxime! Magni, voluptatem.</div>
+    </div>
+
+    <div class="accordion">
+        <button class="accordion-head">Aqui vai o texto do accordion 2<span>&plus;</span><span class="on">&minus;</span></button>
+        <div class="accordion-body">2 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam accusamus minus est dicta amet, aperiam eos recusandae quasi! Harum, sit hic. Eum debitis atque hic dolores iure id, voluptatem corporis. Quas non mollitia quos quisquam rerum est ratione aliquid id exercitationem consequatur? Maxime ad autem tempore dolor maiores commodi cum iure, explicabo consequuntur incidunt eveniet corporis vero atque magnam quam eum, reprehenderit nemo? Asperiores quisquam fugiat perferendis. Ea impedit itaque laborum, nisi, sint reiciendis delectus porro et blanditiis sapiente, eveniet qui accusantium in at. Perspiciatis ea nam inventore, blanditiis modi neque! Excepturi consequuntur eveniet cumque aperiam exercitationem maxime! Magni, voluptatem.</div>
+    </div>
+
+    <div class="accordion">
+        <button class="accordion-head">Aqui vai o texto do accordion 2<span>&plus;</span><span class="on">&minus;</span></button>
+        <div class="accordion-body">2 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam accusamus minus est dicta amet, aperiam eos recusandae quasi! Harum, sit hic. Eum debitis atque hic dolores iure id, voluptatem corporis. Quas non mollitia quos quisquam rerum est ratione aliquid id exercitationem consequatur? Maxime ad autem tempore dolor maiores commodi cum iure, explicabo consequuntur incidunt eveniet corporis vero atque magnam quam eum, reprehenderit nemo? Asperiores quisquam fugiat perferendis. Ea impedit itaque laborum, nisi, sint reiciendis delectus porro et blanditiis sapiente, eveniet qui accusantium in at. Perspiciatis ea nam inventore, blanditiis modi neque! Excepturi consequuntur eveniet cumque aperiam exercitationem maxime! Magni, voluptatem.</div>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+        $('.accordion-head').click(function(){
+            $(this).siblings().slideToggle(500);
+            $(this).toggleClass('on');
+        });
+    </script>
+</body>
+
+
+</html>
